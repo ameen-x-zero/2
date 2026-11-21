@@ -1,0 +1,192 @@
+Found a 6 line (40 tokens) duplication in the following files: 
+Starting at line 22 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\EmailReminder.java
+Starting at line 22 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 22 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+            Logger.log("EMAIL failed: no contact");
+            return false;
+        }
+        String msg = "Reminder: appointment #" + appt.getId() + " with Dr. "
+                + appt.getDoctor().getName() + " on day " + appt.getDay();
+        System.out.println("[EMAIL] to " + target + ": " + msg);
+
+=====================================================================
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 12 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\DoctorValidator.java
+Starting at line 12 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\NurseValidator.java
+Starting at line 12 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PatientValidator.java
+
+            Logger.log("Doctor is null");
+            return false;
+        }
+        if (x.getName() == null || x.getName().trim().length() < 3) {
+            Logger.log("Doctor name too short");
+
+=====================================================================
+Found a 3 line (35 tokens) duplication in the following files: 
+Starting at line 186 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\HospitalManager.java
+Starting at line 192 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\HospitalManager.java
+
+    public void sendEmail(Patient p, String msg) {
+        if (p == null || msg == null || msg.trim().isEmpty()) return;
+        System.out.println("[EMAIL] to " + p.getEmail() + ": " + msg);
+
+=====================================================================
+Found a 5 line (33 tokens) duplication in the following files: 
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\CashBillCalculator.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\GovernmentBillCalculator.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\InsuranceBillCalculator.java
+
+public class CashBillCalculator {
+
+    public double calculate(double consultationFee, double medicinesCost, int roomDays, double roomPrice) {
+        double total = consultationFee + medicinesCost + roomDays * roomPrice;
+        double covered = total * 0.05;
+
+=====================================================================
+Found a 6 line (33 tokens) duplication in the following files: 
+Starting at line 17 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 17 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+            Logger.log("PUSH skipped: appointment not scheduled");
+            return false;
+        }
+        String target = patient.getPhone();
+        if (target == null || target.trim().isEmpty()) {
+            Logger.log("PUSH failed: no contact");
+
+=====================================================================
+Found a 6 line (32 tokens) duplication in the following files: 
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\EmailReminder.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+public class EmailReminder {
+    private int sentCount = 0;
+
+    public boolean send(Patient patient, Appointment appt) {
+        if (patient == null || appt == null) {
+            Logger.log("EMAIL failed: missing data");
+
+=====================================================================
+Found a 5 line (31 tokens) duplication in the following files: 
+Starting at line 16 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\DoctorValidator.java
+Starting at line 16 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\NurseValidator.java
+Starting at line 16 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PatientValidator.java
+
+            Logger.log("Doctor name too short");
+            return false;
+        }
+        if (x.getPhone() == null || !x.getPhone().matches("[0-9+]{9,15}")) {
+            Logger.log("Doctor phone invalid");
+
+=====================================================================
+Found a 5 line (29 tokens) duplication in the following files: 
+Starting at line 10 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Appointment.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Prescription.java
+
+    }
+    public int getId() { return id; }
+    public Patient getPatient() { return patient; }
+    public Doctor getDoctor() { return doctor; }
+    public int getDay() { return day; }
+
+=====================================================================
+Found a 5 line (29 tokens) duplication in the following files: 
+Starting at line 7 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Doctor.java
+Starting at line 7 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Nurse.java
+
+    }
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getPhone() { return phone; }
+    public String getSpecialty() { return specialty; }
+
+=====================================================================
+Found a 3 line (23 tokens) duplication in the following files: 
+Starting at line 20 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\EmailReminder.java
+Starting at line 20 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 20 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+        String target = patient.getEmail();
+        if (target == null || target.trim().isEmpty()) {
+            Logger.log("EMAIL failed: no contact");
+
+=====================================================================
+Found a 6 line (22 tokens) duplication in the following files: 
+Starting at line 15 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\CashBillCalculator.java
+Starting at line 15 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\GovernmentBillCalculator.java
+Starting at line 15 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\InsuranceBillCalculator.java
+
+        }
+        double payable = total - covered;
+        if (payable < 0) {
+            payable = 0;
+        }
+        Logger.log("Cash bill: total=" + total + " covered=" + covered + " payable=" + payable);
+
+=====================================================================
+Found a 7 line (22 tokens) duplication in the following files: 
+Starting at line 27 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\EmailReminder.java
+Starting at line 27 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 27 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+        System.out.println("[EMAIL] to " + target + ": " + msg);
+        sentCount++;
+        return true;
+    }
+
+    public int getSentCount() { return sentCount; }
+}
+
+=====================================================================
+Found a 5 line (21 tokens) duplication in the following files: 
+Starting at line 13 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\EmailReminder.java
+Starting at line 13 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\PushReminder.java
+Starting at line 13 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\SmsReminder.java
+
+            Logger.log("EMAIL failed: missing data");
+            return false;
+        }
+        if (appt.getStatus() != AppointmentStatus.SCHEDULED) {
+            Logger.log("EMAIL skipped: appointment not scheduled");
+
+=====================================================================
+Found a 2 line (21 tokens) duplication in the following files: 
+Starting at line 33 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Main.java
+Starting at line 34 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Main.java
+
+        System.out.println(new CashBillCalculator().calculate(400, 170, 3, 600));
+        System.out.println(new InsuranceBillCalculator().calculate(400, 170, 3, 600));
+
+=====================================================================
+Found a 4 line (20 tokens) duplication in the following files: 
+Starting at line 10 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Appointment.java
+Starting at line 5 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Bill.java
+Starting at line 8 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Prescription.java
+
+    }
+    public int getId() { return id; }
+    public Patient getPatient() { return patient; }
+    public Doctor getDoctor() { return doctor; }
+
+=====================================================================
+Found a 4 line (20 tokens) duplication in the following files: 
+Starting at line 7 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Doctor.java
+Starting at line 5 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Medicine.java
+Starting at line 7 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Nurse.java
+Starting at line 12 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Patient.java
+
+    }
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getPhone() { return phone; }
+
+=====================================================================
+Found a 2 line (20 tokens) duplication in the following files: 
+Starting at line 33 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Main.java
+Starting at line 35 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\2\src\hospital\Main.java
+
+        System.out.println(new CashBillCalculator().calculate(400, 170, 3, 600));
+        System.out.println(new InsuranceBillCalculator().calculate(400, 170, 3, 600));
+

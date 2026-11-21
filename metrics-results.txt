@@ -1,0 +1,1 @@
+src\hospital\HospitalManager.java:21:	GodClass:	Possible God Class (WMC=75, ATFD=70, TCC=12.554%)
